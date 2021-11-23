@@ -3,6 +3,7 @@ import './App.css';
 import CartWidgets from './Components/CartWidget.js/CartWidgets';
 import React ,{ Component } from 'react';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemCount from './Components/ItemCount/ItemCount';
 
 class App extends Component {
   constructor(props) {
