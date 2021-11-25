@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import ItemCount from '../ItemCount/ItemCount';
-import CartWidgets from '../../CartWidget/CartWidgets';
+import CartWidgets from '../CartWidget/CartWidgets';
 
 export default class Navbar extends Component {
     render() {
@@ -16,7 +15,7 @@ export default class Navbar extends Component {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <ItemListContainer manito={this.state.greetings} />
+        <ItemListContainer manito={this.props.greetings} />
       </li>
       <li class="nav-item">
         <CartWidgets />
