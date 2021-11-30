@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./CartWidget.css"
+import "./ItemCount.css"
 
 export default class LucioContador extends Component {
     constructor(props) {
@@ -28,8 +28,8 @@ export default class LucioContador extends Component {
             <div className="Contador">
                 <h1>Contador: {this.state.contador}</h1>
                 <button onClick={() => this.sumar()}>+</button>
+                <button onClick={() => this.resetCounter()}>Resetear</button>
                 <button onClick={() => this.restar()}>-</button>
-                <button onClick={() => this.resetCounter()}>Agregar al carrito</button>
             </div>
             
         )
