@@ -1,7 +1,8 @@
 import './App.css';
 import React ,{ Component } from 'react';
 import Navbar from './Components/Navbar/Navbar';
-import ItemCount from './Components/ItemCount/ItemCount';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+
 
 
 
@@ -21,7 +22,8 @@ class App extends Component {
   return (
     <div className="App">
       <Navbar greetings={this.state.greetings}/>
-      <ItemCount />
+      <ItemListContainer />
+      
     </div>
   );
 }
