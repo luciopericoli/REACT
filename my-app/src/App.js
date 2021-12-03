@@ -1,30 +1,29 @@
 import './App.css';
-import React ,{ Component } from 'react';
+import React ,{ Component, useEffect } from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-
-
-
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      greetings:'Bienvenido'
     };
   }
 
 
 
-  render() {
 
+  render() {
   return (
-    <div className="App">
-      <Navbar greetings={this.state.greetings}/>
-      <ItemListContainer />
-      
-    </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+        <Route path="/" element={<ItemListContainer />} /> 
+          <Route path="/:status" element={<ItemListContainer />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 }

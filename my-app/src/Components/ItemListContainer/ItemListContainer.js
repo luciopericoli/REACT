@@ -28,6 +28,8 @@ export default class ItemListContainer extends Component {
         this.FetchDeApi()
     }
 
+    
+
 
     render() {
         return (
