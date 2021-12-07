@@ -8,6 +8,7 @@ export default class LucioContador extends Component {
             contador: 0
         }
     }
+    
     sumar() {
         this.setState({
             contador: this.state.contador + 1
@@ -18,17 +19,18 @@ export default class LucioContador extends Component {
             contador: this.state.contador - 1
         })
     }
-    resetCounter() {
+    enviarCarrito() {
         this.setState({
-            contador: 0
+            contador: 0 
         })
     }
+      
     render() {
         return (
             <div className="Contador">
-                <h1>Contador: {this.state.contador}</h1>
+                <h1>Total: {this.state.contador}</h1>
                 <button onClick={() => this.sumar()}>+</button>
-                <button onClick={() => this.resetCounter()}>Resetear</button>
+                <button onClick={() => this.props.cantidadCarrito(this.state.contador)}>Carrito</button>
                 <button onClick={() => this.restar()}>-</button>
             </div>
             
