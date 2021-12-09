@@ -1,5 +1,11 @@
+import { getByTestId } from '@testing-library/react';
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link,
+  Route,
+  Switch,
+  withRouter,
+  useParams
+} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
 
 
@@ -8,15 +14,9 @@ export default class ItemDetailContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          cantidadCarrito: 0
+          id:'',
         }
     }
-    
-onAddToCart = (contador) => {
-    this.setState({
-        cantidadCarrito: contador
-    })
-}
 
     render() {
         console.log(this.props);
@@ -24,12 +24,12 @@ onAddToCart = (contador) => {
             <div className="card">
             <div className="card-header">
               <div className="profile">
-                <span className="letter">{this.props.personaje.status}</span>
+                <span className="letter"><Link to={`/status/${this.props.personaje.status}`}>{this.props.personaje.status}</Link></span>
               </div>
               <div className="card-title-group">
               
-                <h5 className="card-title"><Link to={`/${this.props.personaje.status}`}>{this.props.personaje.name}</Link></h5>
-                <ItemCount cantidadCarrito={this.onAddToCart()} />
+                <h5 className="card-title"><Link to={`/personaje/${this.props.personaje.id}`}>{this.props.personaje.name}</Link></h5>
+                <ItemCount />
                 
                 
         

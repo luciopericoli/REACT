@@ -1,32 +1,33 @@
 import './App.css';
 import React ,{ Component, useEffect } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useSearchParams,
+  useParams
+} from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-
-
-
-  render() {
-  return (
+function App() {
+  
+    return (
       <BrowserRouter>
         <Navbar />
         <Routes>
         <Route path="/" element={<ItemListContainer />} /> 
-          <Route path="/:status" element={<ItemListContainer />} />
+        <Route path="status/:status" element={<ItemListContainer />} />
+        <Route path="personaje/:id" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
   );
-}
+
 }
 
 export default App;
+
 

@@ -13,17 +13,12 @@ export default class Navbar extends Component {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item m-1">
-        <Link to="/Alive" class="nav-link">Alive</Link>
-      </li>
-      <li class="nav-item m-1">
-        <Link to="/Dead" class="nav-link">Dead</Link>
-      </li>
-      <li class="nav-item m-1">
-        <Link to="/Unknown" class="nav-link">Unknown</Link>
+        <Link to="/Cart" class="nav-link">
+        <CartWidgets /> 
+        </Link>
        </li>
       
       <li class="nav-item m-1 mt-2">
-        <CartWidgets />
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

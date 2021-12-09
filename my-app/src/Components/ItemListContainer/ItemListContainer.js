@@ -11,6 +11,7 @@ export default class ItemListContainer extends Component {
         super(props);
         this.state = {
         Personajes: [],
+        PersonajesFiltrados: []
         }
     }
 
@@ -27,7 +28,6 @@ export default class ItemListContainer extends Component {
     componentDidMount() {
         this.FetchDeApi()
     }
-
     
 
 
