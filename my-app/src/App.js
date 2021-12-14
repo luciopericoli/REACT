@@ -1,32 +1,34 @@
 import './App.css';
-import React ,{ Component, useEffect } from 'react';
+import React  from 'react';
 import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
-  useSearchParams,
-  useParams
 } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import AlivePage from './Components/AlivePage';
+import DeadPage from './Components/DeadPage';
+import UnknownPage from './Components/UnknownPage';
+import DetailPage from './Components/DetailPage';
 
 
-function App() {
-  
+function App () {
     return (
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-        <Route path="/" element={<ItemListContainer />} /> 
-        <Route path="status/:status" element={<ItemListContainer />} />
-        <Route path="personaje/:id" element={<ItemDetailContainer />} />
-        </Routes>
-      </BrowserRouter>
-  );
-
-}
+      <div className="App">
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="personaje/:id" element={<DetailPage />} />
+            <Route path="status/Alive" element={<AlivePage />} />
+            <Route path="status/Dead" element={<DeadPage />} />
+            <Route path="status/Unknown" element={<UnknownPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    );
+  } 
 
 export default App;
 

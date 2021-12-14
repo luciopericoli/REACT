@@ -16,9 +16,21 @@ export default class Navbar extends Component {
         <Link to="/Cart" class="nav-link">
         <CartWidgets /> 
         </Link>
-       </li>
-      
-      <li class="nav-item m-1 mt-2">
+       </li>     
+      <li class="nav-item m-1 ">
+        <Link to="/status/Alive" class="nav-link">
+          <span class="badge badge-pill badge-success">Alive</span>
+        </Link>
+      </li>
+      <li class="nav-item m-1">
+        <Link to="/status/Dead" class="nav-link">
+          <span class="badge badge-pill badge-danger">Dead</span>
+        </Link>
+      </li>
+      <li class="nav-item m-1">
+        <Link to="/status/unknown" class="nav-link">
+          <span class="badge badge-pill badge-warning">unknown</span>
+        </Link>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

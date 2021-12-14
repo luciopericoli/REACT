@@ -1,33 +1,28 @@
 import React, { Component } from 'react'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
-
-
-
-
-
 export default class ItemListContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
         Personajes: [],
-        PersonajesFiltrados: []
         }
     }
 
     FetchDeApi() {
         fetch('https://rickandmortyapi.com/api/character')
-
             .then(response => response.json())
             .then(data => {
                 this.setState({
-                    Personajes: data.results
+                    Personajes: data.results,
                 })
             })
     }
+
     componentDidMount() {
         this.FetchDeApi()
     }
+    
     
 
 
