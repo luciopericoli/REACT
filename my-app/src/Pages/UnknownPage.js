@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from '../Components/ItemDetailContainer/ItemDetailContainer';
 export default class AlivePage extends Component {
     constructor(props) {
         super(props);
@@ -9,7 +9,7 @@ export default class AlivePage extends Component {
     }
 
 FetchDeApi() {
-        fetch('https://rickandmortyapi.com/api/character/?status=Dead') 
+        fetch('https://rickandmortyapi.com/api/character/?status=Unknown') 
         .then(response => response.json())
         .then(data => {
             this.setState({

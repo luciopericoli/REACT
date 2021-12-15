@@ -1,5 +1,5 @@
 import './App.css';
-import React  from 'react';
+import React from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -7,11 +7,12 @@ import {
 } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import AlivePage from './Components/AlivePage';
-import DeadPage from './Components/DeadPage';
-import UnknownPage from './Components/UnknownPage';
-import DetailPage from './Components/DetailPage';
-
+import AlivePage from './Pages/AlivePage';
+import DeadPage from './Pages/DeadPage';
+import UnknownPage from './Pages/UnknownPage';
+import DetailPage from './Pages/DetailPage';
+import Cart from './Pages/Cart';
+import CartContext from './Context/CartContext';
 
 function App () {
     return (
@@ -24,6 +25,7 @@ function App () {
             <Route path="status/Alive" element={<AlivePage />} />
             <Route path="status/Dead" element={<DeadPage />} />
             <Route path="status/Unknown" element={<UnknownPage />} />
+            <Route path="/cart" element={<Cart/>} />
           </Routes>
         </BrowserRouter>
       </div>
